@@ -8,7 +8,7 @@
 
 ![20210311_204535](https://user-images.githubusercontent.com/56459297/110884572-4cb8f200-830b-11eb-93eb-8d98c10fead4.jpg)
 
-___Installation__
+___Installation___
 
 ```
 1. git clone https://github.com/princekrvert/m_kit.git
