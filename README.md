@@ -11,8 +11,8 @@
 ___Installation__
 
 ```
-git clone https://github.com/princekrvert/m_kit.git
-cd m_kit
-chomd +x m_kit.sh
-./m_kit.sh
+1. git clone https://github.com/princekrvert/m_kit.git
+2. cd m_kit
+3. chomd +x m_kit.sh
+4. ./m_kit.sh
 ```
