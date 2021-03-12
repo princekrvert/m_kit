@@ -6,4 +6,4 @@
 ## Install zsh,powerlevrl10k and change the background of the termux
 
 
-![20210311_204535](https://user-images.githubusercontent.com/56459297/110884572-4cb8f200-830b-11eb-93eb-8d98c10fead4.jpg
+![20210311_204535](https://user-images.githubusercontent.com/56459297/110884572-4cb8f200-830b-11eb-93eb-8d98c10fead4.jpg)
