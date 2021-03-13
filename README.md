@@ -19,3 +19,9 @@ ___Installation___
  ### Termux Look 
 
 ![20210313_103500](https://user-images.githubusercontent.com/56459297/111019875-ff5e8280-83e7-11eb-8fe8-be8acf1f4c9b.jpg)
+
+#### Social media 
+
+[INSTAGRAM](https://www.instagram.com/sitprincekrvert)
+
+[YOUTUBE](https://youtube.com/channel/UCiplAqC9AwtGGxXU3WQy8pw)
