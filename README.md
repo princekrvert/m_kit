@@ -16,3 +16,6 @@ ___Installation___
 3. chomd +x m_kit.sh
 4. ./m_kit.sh
 ```
+ ### Termux Look 
+
+![20210313_103500](https://user-images.githubusercontent.com/56459297/111019875-ff5e8280-83e7-11eb-8fe8-be8acf1f4c9b.jpg | width=20)
