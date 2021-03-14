@@ -13,7 +13,7 @@ ___Installation___
 ```
 1. git clone https://github.com/princekrvert/m_kit.git
 2. cd m_kit
-3. chomd +x m_kit.sh
+3. chmod +x m_kit.sh
 4. ./m_kit.sh
 ```
  ### Termux Look 
