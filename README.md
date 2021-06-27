@@ -22,6 +22,6 @@ ___Installation___
 
 #### Social media 
 
-[INSTAGRAM](https://www.instagram.com/sitprincekrvert)
+[INSTAGRAM](https://www.instagram.com/sirprincekrvert)
 
 [YOUTUBE](https://youtube.com/channel/UCiplAqC9AwtGGxXU3WQy8pw)
