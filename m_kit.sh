@@ -20,6 +20,12 @@ user_intrupt(){
 trap user_intrupt SIGINT
 trap user_intrupt SIGTSTP
 sfs="/data/data/com.termux/files/home"
+#Make a function to update the repo...
+up_repo(){
+	git pull https://github.com/princekrvert/m_kit.git > /dev/null 2>&1
+	clear
+}
+up_repo
 #install all requirememts--------
 req(){
 	apt update && apt upgrade
@@ -184,6 +190,9 @@ else
 	echo -e "${r} Invalid option"
 
 fi
+cd ~ 
+cd m_kit
+bash f_change.sh
 
 echo -e "${g} Please restart your termux"
 
