@@ -39,11 +39,8 @@ req
 c_shell(){
 	cd -s $(which zsh)
 	echo -e "${r} Default shell changed to zsh"
-	#Or add zsh to bshrc
-	cd ~
-	cd ..
-	cd usr/etc
-	echo "zsh" >> bash.bashrc
+	#Or add zsh 
+	chsh -s zsh
 
 }
 c_shell
