@@ -159,6 +159,7 @@ back(){
 	echo -e "${w} Changing background"
 	cd $sfs/m_kit 
 	cp OMX/$1/colors.properties ~/.termux
+	termux-reload-settings
 
 
 }
