@@ -1,3 +1,4 @@
+
 #!/data/data/com.termux/files/usr/bin/bash
 #@Author prince kumar 
 #@ Date 21 feb 2020
@@ -68,6 +69,7 @@ theme(){
 	sed -i '/ZSH_THEME=/d' .zshrc
 	sed -i "24i ZSH_THEME=\"$1\"" .zshrc
 	echo -e "Theme slected $1 "
+	termux-reload-settings 
 
 }
 #Make a manue for the oh my z shell
