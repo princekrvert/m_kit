@@ -38,4 +38,5 @@ else
 	echo -e "\e[31;1m Invalid option 👿 "
 
 fi
+termux-reload-settings
 
