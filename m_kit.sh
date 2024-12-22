@@ -13,7 +13,7 @@ w="\e[0;1m"
 #Make a function to exit the program ---
 user_intrupt(){
 	echo -e "${r} ______Exiting M_KIT _______"
-	sleep 2
+	sleep 1
 	exit
 }
 
@@ -163,33 +163,48 @@ back(){
 
 
 }
-echo -e "${w} Change Background "
-echo ""
-echo -e "${r}[${w}01${r}] ${g} Default "
-echo -e "${r}[${w}02${r}] ${g} D_Blue "
-echo -e "${r}[${w}03${r}] ${g} D_Green"
-echo -e "${r}[${w}04${r}] ${g} D_red"
-echo -e "${r}[${w}05${r}] ${g} D_purple"
-echo -e "${r}[${w}06${r}] ${g} L_yellow"
-echo " "
-echo -ne "${o}[${r}~${o}] ${w} Select any : "
-read b_optn
-if [[ $b_optn == 1 || $b_optn == 01 ]];then
-	echo " "
-elif [[ $b_optn == 2 ||  $b_optn == 02 ]];then
-	back d_blue
-elif [[ $b_optn == 3 || $b_optn == 03 ]];then
-        back d_green
-elif [[ $b_optn == 4 || $b_optn == 04 ]];then
-        back d_red
-elif [[ $b_optn == 5 || $b_optn == 05 ]] ;then
-        back d_purple
-elif [[ $b_optn == 6 || $b_optn == 06 ]];then
-        back l_yellow
-else 
-	echo -e "${r} Invalid option"
+// NOw make a function to change the background colour..
+change_back(){
+	// This function will change the background of the termux ..
+	// use gum to display the background options .
+	// Make some slab to choose the background 
+	option=$(gum choose "black" "Light_black" "dark_blue" "White" "Light_green" "Light_purple" "Exit")
+	// Apply the if and else the to apply the changes ...
+	if [[ $option == "black" ]];then {
+	back black 
+	}
+	elif [[ $option == "Light_black" ]];then {
+		back Light_black 
+	}
+	elif [[ $option == "dark_blue" ]];then {
+		back dark_blue
 
-fi
+	}
+	elif [[ $option == "White" ]];then {
+		back White
+
+	}
+	elif [[ $option == "Light_green" ]];then{
+		back Light_green
+
+	}
+	elif [[ $option == "Light_purple" ]];then{
+		back Light_purple
+
+	}
+	elif [[ $option == "Exit" ]];then
+	{
+		// now proceeed futher because the changes has been made 
+		echo -ne ""
+	}
+	else {
+		echo -ne "\033[31;1m Invalid options "
+
+	}
+
+    fi
+
+}
 cd ~ 
 cd m_kit
 bash f_change.sh
