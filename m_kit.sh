@@ -189,11 +189,11 @@ change_back(){
 		back "#cdcdd4"
 
 	}
-	elif [[ $option == "Light_green" ]];then{
+	elif [[ $option == "Light_green" ]];then {
 		back "#387844"
 
 	}
-	elif [[ $option == "Light_purple" ]];then{
+	elif [[ $option == "Light_purple" ]];then {
 		back "#aa47b5"
 
 	}
