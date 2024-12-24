@@ -32,6 +32,8 @@ req(){
 	apt update && apt upgrade
 	apt-get install zsh
 	pkg install curl
+	pkg install golang -y 
+	go install github.com/charmbracelet/gum@latest
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 }
@@ -156,10 +158,13 @@ esac
 #Now change the termux backgeound-----
 #Make a function to handle user background choise---
 back(){
-	echo -e "${w} Changing background"
-	cd $sfs/m_kit 
-	cp OMX/$1/colors.properties ~/.termux
+	// NOw we wiil change the background ..
+	cd 
+	cd .termux
+	// NOw edit the color properties 
+	sed -i '/background/ s/\#[0-9|a-z]*/${1}/' colors.properties 
 	termux-reload-settings
+	change_back
 
 
 }
@@ -171,25 +176,25 @@ change_back(){
 	option=$(gum choose "black" "Light_black" "dark_blue" "White" "Light_green" "Light_purple" "Exit")
 	// Apply the if and else the to apply the changes ...
 	if [[ $option == "black" ]];then {
-	back black 
+	back "#080808"
 	}
 	elif [[ $option == "Light_black" ]];then {
-		back Light_black 
+		back "#1c1b1b"
 	}
 	elif [[ $option == "dark_blue" ]];then {
-		back dark_blue
+		back "#06060a"
 
 	}
 	elif [[ $option == "White" ]];then {
-		back White
+		back "#cdcdd4"
 
 	}
 	elif [[ $option == "Light_green" ]];then{
-		back Light_green
+		back "#387844"
 
 	}
 	elif [[ $option == "Light_purple" ]];then{
-		back Light_purple
+		back "#aa47b5"
 
 	}
 	elif [[ $option == "Exit" ]];then
