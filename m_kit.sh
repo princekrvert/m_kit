@@ -165,6 +165,8 @@ back(){
 	# NOw edit the color properties 
 	sed -i "/background/ s/\#[0-9|a-z]*/$colour/" colors.properties 
 	termux-reload-settings
+	# now make a system to call itself if changes is made 
+	change_back
 }
 #NOw make a function to change the background colour..
 change_back(){
