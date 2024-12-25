@@ -173,17 +173,29 @@ change_back(){
 	# This function will change the background of the termux
 	# use gum to display the background options .
 	# Make some slab to choose the background 
-	option=$(gum choose "black" "Light_black" "dark_blue" "White" "Light_green" "Light_purple" "Exit")
+	option=$(gum choose "black" "Light_black" "Solorized_dark" "Aurora" "dark_blue" "Dark_gray" "White" "Light_green" "Monokai" "Light_purple" "Go_ahead")
 	# Apply the if and else the to apply the changes ...
 	if [[ $option == "black" ]];then {
 	back "#080808"
 	}
+	elif [[ $option == "Aurora" ]];then {
+		back "#bf616a"
+	}
 	elif [[ $option == "Light_black" ]];then {
 		back "#1c1b1b"
 	}
+	elif [[ $option == "Solorized_dark" ]];then {
+		back "#002b36"
+	}
 	elif [[ $option == "dark_blue" ]];then {
-		back "#06060a"
+		back "#030c1c"
 
+	}
+	elif [[ $option == "Monokai" ]];then {
+		back "#E6DB74"
+	}
+	elif [[ $option == "Dark_gray" ]];then {
+		back "#A9A9A9"
 	}
 	elif [[ $option == "White" ]];then {
 		back "#cdcdd4"
@@ -197,7 +209,7 @@ change_back(){
 		back "#aa47b5"
 
 	}
-	elif [[ $option == "Exit" ]];then
+	elif [[ $option == "Go_ahead" ]];then
 	{
 		# now proceeed futher because the changes has been made 
 		echo -ne ""
