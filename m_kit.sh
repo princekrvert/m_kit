@@ -163,7 +163,7 @@ back(){
 	cd ~
 	cd .termux
 	# NOw edit the color properties 
-	sed -i "/background/ s/\#[0-9|a-z]{6}/$colour/" colors.properties 
+	sed -i "/background/ s/\#\w\d{6}/$colour/" colors.properties 
 	termux-reload-settings
 	# now make a system to call itself if changes is made 
 	change_back
