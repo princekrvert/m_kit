@@ -158,20 +158,20 @@ esac
 #Now change the termux backgeound-----
 #Make a function to handle user background choise---
 back(){
-	// NOw we wiil change the background ..
-	cd 
+	#NOw we wiil change the background ..
+	cd ~
 	cd .termux
-	// NOw edit the color properties 
+	# NOw edit the color properties 
 	sed -i '/background/ s/\#[0-9|a-z]*/${1}/' colors.properties 
 	termux-reload-settings
 }
-// NOw make a function to change the background colour..
+#NOw make a function to change the background colour..
 change_back(){
-	// This function will change the background of the termux
-	// use gum to display the background options .
-	// Make some slab to choose the background 
+	# This function will change the background of the termux
+	# use gum to display the background options .
+	# Make some slab to choose the background 
 	option=$(gum choose "black" "Light_black" "dark_blue" "White" "Light_green" "Light_purple" "Exit")
-	// Apply the if and else the to apply the changes ...
+	# Apply the if and else the to apply the changes ...
 	if [[ $option == "black" ]];then {
 	back "#080808"
 	}
@@ -196,7 +196,7 @@ change_back(){
 	}
 	elif [[ $option == "Exit" ]];then
 	{
-		// now proceeed futher because the changes has been made 
+		# now proceeed futher because the changes has been made 
 		echo -ne ""
 	}
 	else {
