@@ -164,13 +164,10 @@ back(){
 	// NOw edit the color properties 
 	sed -i '/background/ s/\#[0-9|a-z]*/${1}/' colors.properties 
 	termux-reload-settings
-	change_back
-
-
 }
 // NOw make a function to change the background colour..
 change_back(){
-	// This function will change the background of the termux ..
+	// This function will change the background of the termux
 	// use gum to display the background options .
 	// Make some slab to choose the background 
 	option=$(gum choose "black" "Light_black" "dark_blue" "White" "Light_green" "Light_purple" "Exit")
@@ -210,6 +207,7 @@ change_back(){
     fi
 
 }
+change_back
 cd ~ 
 cd m_kit
 bash f_change.sh
