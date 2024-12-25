@@ -159,10 +159,11 @@ esac
 #Make a function to handle user background choise---
 back(){
 	#NOw we wiil change the background ..
+	colour=$1
 	cd ~
 	cd .termux
 	# NOw edit the color properties 
-	sed -i '/background/ s/\#[0-9|a-z]*/${1}/' colors.properties 
+	sed -i '/background/ s/\#[0-9|a-z]*/$colour/' colors.properties 
 	termux-reload-settings
 }
 #NOw make a function to change the background colour..
