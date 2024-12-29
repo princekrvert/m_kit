@@ -163,7 +163,7 @@ back(){
 	cd ~
 	cd .termux
 	# NOw edit the color properties 
-	sed -i "/background/ s/\#[a-z|0-9]*/$colour/" colors.properties 
+	sed -i "/background/ s/\#[0-9|a-z]*/$colour/" colors.properties 
 	termux-reload-settings
 	# now make a system to call itself if changes is made 
 	change_back
@@ -222,6 +222,39 @@ change_back(){
     fi
 
 }
+# Make a function to change the foreground colour ..
+change_f(){
+	# move into the desire directory to change the colour ..
+	colour=$1
+	cd ~
+	cd .termux
+	# NOw edit the color properties 
+	sed -i "/foreground/ s/\#[0-9|a-z]*/$colour/" colors.properties 
+	termux-reload-settings
+	# now make a system to call itself if changes is made 
+	chage_fore
+}
+# make a function to change the foreground colour 
+chage_fore(){
+# now make selection menue 
+optionf=$(gum choose "Red" "Green" "Pink" "Go_ahead")
+# now make a if else to control the statements ..
+if [[ $optionf == "Red" ]];then {
+	## call the foreground color..
+	change_f "#e6151c"
+}
+elif [[ $optionf == "Green" ]]; then {
+	change_f "#2bcc1d"
+}
+elif [[ $optionf == "Pink" ]];then {
+	change_f "#da19e0"
+}
+elif [[ $optionf == "Go_ahead" ]]; then {
+	echo ""
+}
+}
+	
+
 change_back
 cd ~ 
 cd m_kit
