@@ -72,9 +72,12 @@ theme(){
 	sed -i "24i ZSH_THEME=\"$1\"" .zshrc
 	echo -e "Theme slected $1 "
 	termux-reload-settings 
+	theme_menue
 
 }
+
 #Make a manue for the oh my z shell
+theme_menue(){
 echo -e "${pu}ZSH THEME slection "
 echo -e "\n"
 
@@ -92,7 +95,7 @@ echo -e "${g}[${o}11${g}] ${w} blinks"
 echo -e "${g}[${o}12${g}] ${w} candy"
 echo -e "${g}[${o}13${g}] ${w} cloud"
 echo -e "${g}[${o}14${g}] ${w} custum"
-echo -e "${g}[${o}15${g}] ${w} About me"
+echo -e "${g}[${o}15${g}] ${w} Go Ahead"
 echo " "
 #Handle user input --------
 echo -ne "${o}[${r}~${o}] ${w} Select any : "
@@ -151,12 +154,14 @@ case $t_optn in
 		read t_name 
 		theme $t=name ;;
 	15)
-		echo "i am prince ";;
+		echo ""
 	*)
 		echo -e "${r} Invalid option";;
 esac
 #Now change the termux backgeound-----
 #Make a function to handle user background choise---
+}
+theme_menue
 back(){
 	#NOw we wiil change the background ..
 	colour=$1
